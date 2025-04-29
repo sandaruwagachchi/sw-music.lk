@@ -1,20 +1,17 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import React from 'react';
 import styles from './styles';
 
-
-const imageUrl = "https://linkstorage.linkfire.com/medialinks/images/ae50fe5a-9c55-4307-ab83-14bbfc03372d/artwork-440x440.jpg";
-
-const SongCard = ({containerStyle, imageStyle}) => {
+const SongCard = ({ song, containerStyle, imageStyle }) => {
   return (
     <View style={[styles.container, containerStyle]}>
-     <TouchableOpacity>
-     <Image source={{uri:imageUrl}} style={[styles.coverImage, imageStyle]}/>
-     <Text style={styles.title}>Monster Go Home</Text>
-     <Text style={styles.artist}>Alen Walker</Text>
-     </TouchableOpacity>
+      <TouchableOpacity>
+        <Image source={{ uri: song.artwork }} style={[styles.coverImage, imageStyle]} />
+        <Text style={styles.title}>{song.title}</Text>
+        <Text style={styles.artist}>{song.artist}</Text>
+      </TouchableOpacity>
     </View>
-  )
-}
+  );
+};
 
-export default SongCard
+export default SongCard;

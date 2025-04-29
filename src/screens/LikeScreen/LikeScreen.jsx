@@ -6,12 +6,17 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import SongCard from '../../components/SongCard';
 import FlotingPlayer from '../../components/FlotingPlayer';
+import { useNavigation } from '@react-navigation/native';
 
 const LikeScreen = () => {
+  const navigation = useNavigation();
+   const toggleDrawer = ()=>{
+     navigation.toggleDrawer();
+   }
   return (
     <SafeAreaView style={styles.container}>
     <View style={styles.header}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={toggleDrawer}>
           <AntDesign name={'left'}  color={'#FF0266'} size={25}/>
       </TouchableOpacity>
       <TouchableOpacity>
