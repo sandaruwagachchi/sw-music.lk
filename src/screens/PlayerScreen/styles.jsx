@@ -1,0 +1,72 @@
+import { StyleSheet, Text, View } from 'react-native'
+const styles = StyleSheet.create({
+    container:{
+        backgroundColor:'white',
+        flex: 1,
+        padding: 6,
+      },
+      header:{
+        justifyContent:'space-between',
+        flexDirection:'row',
+        paddingBottom:20,
+        paddingRight:110,
+        marginVertical:10
+      },
+      title:{
+        color:'#FF0266',
+        fontSize:30,
+        fontWeight:'bold',
+        marginHorizontal:1,
+        marginVertical:-3
+    },
+    coverImage:{
+        width:300,
+        height:300,
+        marginLeft:40,
+        borderRadius:10
+    },
+    text:{
+        fontSize:30,
+        fontFamily:"serif",
+        color:'#FF0266'
+    },
+    artist:{
+        fontSize:20,
+        color:'black'
+    },
+    content:{
+        alignItems:'center',
+        justifyContent:'center',
+        flexDirection:'column',
+        marginTop:30
+    },
+    heartContainer:{
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-between',
+        marginLeft:130,
+        marginRight:10,
+        marginTop:10
+    },
+    controller:{
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-between',
+        paddingHorizontal:10,
+        marginTop:20,
+        marginLeft:5
+    },
+    repeat:{
+        marginLeft:230
+    },
+    playerControlContainer:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center',
+        gap:20,
+        paddingHorizontal:60,
+        marginTop:30
+      }
+})
+export default styles
+
