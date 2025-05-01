@@ -9,6 +9,8 @@ const Drawer = createDrawerNavigator();
 const DrawerNavigation = () => {
   return (
     <Drawer.Navigator screenOptions={{headerShown:false,
+     swipeEdgeWidth:0,
+     drawerType:"slide",
      drawerActiveBackgroundColor: '#FF0266',
      drawerActiveTintColor: 'white',
      backgroundColor: 'gray'}}
