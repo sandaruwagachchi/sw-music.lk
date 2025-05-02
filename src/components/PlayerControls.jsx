@@ -1,9 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
-import TrackPlayer, { usePlaybackState, State, useProgress } from 'react-native-track-player';
+import TrackPlayer, {
+  State,
+  Event,
+  useTrackPlayerEvents,
+} from 'react-native-track-player';
 import { PlayerContext } from '../context/PlayerContext';
 
+// 🔙 Previous Button
 export const GoToPreviousButton = () => {
   const { setCurrentSong } = useContext(PlayerContext);
 
@@ -27,17 +32,27 @@ export const GoToPreviousButton = () => {
   );
 };
 
+// ⏯ Play / Pause Button
 export const PlayPauseButton = () => {
-  const playbackState = usePlaybackState();
-  const progress = useProgress();
+  const [playbackState, setPlaybackState] = useState(State.None);
+
+  // 🔄 Listen to playback state changes
+  useTrackPlayerEvents([Event.PlaybackState], async (event) => {
+    if (event.state !== undefined) {
+      setPlaybackState(event.state);
+    }
+  });
 
   const togglePlayback = async () => {
     try {
       const currentState = await TrackPlayer.getState();
-      
       if (currentState === State.Playing || currentState === State.Buffering) {
         await TrackPlayer.pause();
-      } else if (currentState === State.Paused || currentState === State.Ready || currentState === State.Stopped) {
+      } else if (
+        currentState === State.Paused ||
+        currentState === State.Ready ||
+        currentState === State.Stopped
+      ) {
         await TrackPlayer.play();
       }
     } catch (error) {
@@ -45,7 +60,6 @@ export const PlayPauseButton = () => {
     }
   };
 
-  // Determine the correct icon based on playback state
   const getPlayPauseIcon = () => {
     switch (playbackState) {
       case State.Playing:
@@ -67,6 +81,7 @@ export const PlayPauseButton = () => {
   );
 };
 
+// ⏭ Next Button
 export const GoToNextButton = () => {
   const { setCurrentSong } = useContext(PlayerContext);
 
@@ -76,7 +91,7 @@ export const GoToNextButton = () => {
       const track = await TrackPlayer.getCurrentTrack();
       if (track !== null) {
         const trackObject = await TrackPlayer.getTrack(track);
-        setCurrentSong(trackObject); // 🔁 Update currentSong to refresh UI
+        setCurrentSong(trackObject);
       }
     } catch (error) {
       console.error('Error going to next track:', error);
@@ -90,11 +105,17 @@ export const GoToNextButton = () => {
   );
 };
 
-
-// Optional: Combined Player Controls Component
+// 🎵 All Controls Combined
 export const PlayerControls = () => {
   return (
-    <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', padding: 20 }}>
+    <View
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        padding: 20,
+      }}
+    >
       <GoToPreviousButton />
       <PlayPauseButton />
       <GoToNextButton />
