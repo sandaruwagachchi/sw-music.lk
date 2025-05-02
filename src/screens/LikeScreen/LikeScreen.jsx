@@ -35,10 +35,10 @@ const LikeScreen = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={toggleDrawer}>
-          <AntDesign name={'left'} color={'#FF0266'} size={25} />
+          <AntDesign name={'left'} color={'#BF5700'} size={25} />
         </TouchableOpacity>
         <TouchableOpacity>
-          <MaterialCommunityIcons name={'equalizer-outline'} color={'#FF0266'} size={25} />
+          <MaterialCommunityIcons name={'equalizer-outline'} color={'#BF5700'} size={25} />
         </TouchableOpacity>
       </View>
 

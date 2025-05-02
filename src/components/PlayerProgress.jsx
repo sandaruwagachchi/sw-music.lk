@@ -37,9 +37,9 @@ const PlayerProgress = () => {
         value={progressValue}
         minimumValue={0}
         maximumValue={1}
-        minimumTrackTintColor="#FF0266"
+        minimumTrackTintColor="#BF5700"
         maximumTrackTintColor="gray"
-        thumbTintColor="#FF0266"
+        thumbTintColor="#BF5700"
         onSlidingStart={handleSlidingStart}
         onValueChange={handleValueChange}
         onSlidingComplete={handleSlidingComplete}

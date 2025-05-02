@@ -34,7 +34,7 @@ const PlayerRepeatToggle = () => {
 
   return (
     <TouchableOpacity onPress={toggleRepeatMode}>
-      <MaterialCommunityIcons name={iconName} size={30} color="gray" />
+      <MaterialCommunityIcons name={iconName} size={30} color="#BF5700" />
     </TouchableOpacity>
   );
 };

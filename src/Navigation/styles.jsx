@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
 const styles = StyleSheet.create({
     container:{
-        backgroundColor:'white'
+        backgroundColor:'black'
+
     },
     headerContainer:{
         flexDirection:'row',
@@ -14,7 +15,12 @@ const styles = StyleSheet.create({
     },
     labelStyle:{
         fontSize:22,
-        color:'#FF0266'
+        color:'#DDDBCB',
+        borderColor:'#BF5700',
+        borderWidth:1,
+        height:50,
+        textAlign:'center',
+        borderRadius:10,
     }
 })
 export default styles

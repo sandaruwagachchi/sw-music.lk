@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 const styles = StyleSheet.create({
     container:{
-        backgroundColor:'white',
+        backgroundColor:'black',
         flex: 1,
         padding: 6,
       },
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         marginVertical:10
       },
       title:{
-        color:'#FF0266',
+        color:'#BF5700',
         fontSize:30,
         fontWeight:'bold',
         marginHorizontal:1,
@@ -23,16 +23,18 @@ const styles = StyleSheet.create({
         width:300,
         height:300,
         marginLeft:40,
-        borderRadius:10
+        borderRadius:10,
+        borderColor:'#BF5700',
+        borderWidth:2
     },
     text:{
         fontSize:30,
         fontFamily:"serif",
-        color:'#FF0266'
+        color:'#BF5700'
     },
     artist:{
         fontSize:20,
-        color:'black'
+        color:'#DDDBCB'
     },
     content:{
         alignItems:'center',

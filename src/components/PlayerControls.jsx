@@ -22,7 +22,7 @@ export const GoToPreviousButton = () => {
 
   return (
     <TouchableOpacity onPress={handlePrevious} activeOpacity={0.85}>
-      <FontAwesome6 name={'backward'} size={24} color={'black'} />
+      <FontAwesome6 name={'backward'} size={30} color={'#BF5700'} />
     </TouchableOpacity>
   );
 };
@@ -60,8 +60,8 @@ export const PlayPauseButton = () => {
     <TouchableOpacity onPress={togglePlayback} activeOpacity={0.85}>
       <FontAwesome6
         name={getPlayPauseIcon()}
-        size={25}
-        color={'black'}
+        size={30}
+        color={'#BF5700'}
       />
     </TouchableOpacity>
   );
@@ -85,7 +85,7 @@ export const GoToNextButton = () => {
 
   return (
     <TouchableOpacity onPress={handleNext} activeOpacity={0.85}>
-      <FontAwesome6 name={'forward'} size={24} color={'black'} />
+      <FontAwesome6 name={'forward'} size={30} color={'#BF5700'} />
     </TouchableOpacity>
   );
 };

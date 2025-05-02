@@ -33,7 +33,7 @@ const PlayerScreen = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={goBack}>
-          <AntDesign name={'left'} color={'#FF0266'} size={25} />
+          <AntDesign name={'left'} color={'#BF5700'} size={25} />
         </TouchableOpacity>
         <Text style={styles.title}>Playing Now</Text>
       </View>
@@ -41,7 +41,7 @@ const PlayerScreen = () => {
       <Image source={{ uri: imageUri }} style={styles.coverImage} />
         <View style={styles.heartContainer}>
         <TouchableOpacity onPress={() => addToLiked(activeTrack)}>
-  <FontAwesome name={isExist(likedSongs, activeTrack) ? 'heart' : 'heart-o'} size={25} color={'#FF0266'} />
+  <FontAwesome name={isExist(likedSongs, activeTrack) ? 'heart' : 'heart-o'} size={25} color={'#BF5700'} />
 </TouchableOpacity>
 
       </View>
@@ -52,7 +52,7 @@ const PlayerScreen = () => {
 
       <View style={styles.controller}>
         <TouchableOpacity onPress={handleToggleVolume}>
-          <FontAwesome6 name={isMute ? 'volume-xmark' : 'volume-low'} size={25} />
+          <FontAwesome6 name={isMute ? 'volume-xmark' : 'volume-low'} size={25} color={'#BF5700'} />
         </TouchableOpacity>
         <View style={styles.repeat}>
           <PlayerRepeatToggle />

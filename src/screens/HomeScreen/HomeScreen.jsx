@@ -16,10 +16,10 @@ const HomeScreen = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.openDrawer()}>
-          <FontAwesome6 name="bars-staggered" color="#FF0266" size={25} />
+          <FontAwesome6 name="bars-staggered" color="#BF5700" size={25} />
         </TouchableOpacity>
         <TouchableOpacity>
-          <FontAwesome name="search" color="#FF0266" size={25} />
+          <FontAwesome name="search" color="#BF5700" size={25} />
         </TouchableOpacity>
       </View>
 

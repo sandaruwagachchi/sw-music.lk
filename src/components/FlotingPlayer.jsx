@@ -71,9 +71,9 @@ const FlotingPlayer = () => {
   minimumValue={0}
   maximumValue={1}
   onValueChange={handleSliderChange}
-  minimumTrackTintColor="#FF0266"
+  minimumTrackTintColor="#BF5700"
   maximumTrackTintColor="gray"
-  thumbTintColor="#FF0266"
+  thumbTintColor="#BF5700"
 />
 
       <TouchableOpacity

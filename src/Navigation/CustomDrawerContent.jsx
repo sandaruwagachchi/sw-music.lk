@@ -13,32 +13,32 @@ const CustomDrawerContent = (props) => {
    <DrawerContentScrollView  style={styles.container}>
     <View style={styles.headerContainer}>
         <TouchableOpacity  onPress={() => props.navigation.navigate('Home')}>
-            <Ionicons name={'close-sharp'} size={30} />
+            <Ionicons name={'close-sharp'} size={30} color={'#BF5700'}/>
         </TouchableOpacity>
         <TouchableOpacity>
-        <Ionicons name={isDark ? 'moon':'sunny'} size={30}/>
+        <Ionicons name={isDark ? 'moon':'sunny'} size={30} color={'#BF5700'}/>
         </TouchableOpacity>
     </View>
     <View style={styles.draweItemsContainer}>
       <DrawerItem label={'Profile'}  labelStyle={styles.labelStyle} icon={()=>(
-        <Fontisto name={'user-secret'} size={20}/>
+        <Fontisto name={'user-secret'} size={25} color={'#BF5700'}/>
       )}/>  
       <DrawerItem label={'Liked Songs'} labelStyle={styles.labelStyle} onPress={()=>{
         props.navigation.navigate('Like')
       }} icon={()=>(
-        <AntDesign name={'heart'} size={20}/>
+        <AntDesign name={'heart'} size={25} color={'#BF5700'}/>
       )}/> 
       <DrawerItem label={'Language'}  labelStyle={styles.labelStyle} icon={()=>(
-        <MaterialIcons name={'language'} size={20}/>
+        <MaterialIcons name={'language'} size={25} color={'#BF5700'}/>
       )}/>  
       <DrawerItem label={'Contact Us'}  labelStyle={styles.labelStyle} icon={()=>(
-        <MaterialIcons name={'contacts'} size={20}/>
+        <MaterialIcons name={'contacts'} size={25} color={'#BF5700'}/>
       )}/>  
       <DrawerItem label={'FAQs'}  labelStyle={styles.labelStyle} icon={()=>(
-        <MaterialIcons name={'tips-and-updates'} size={20}/>
+        <MaterialIcons name={'tips-and-updates'} size={25} color={'#BF5700'}/>
       )}/>  
       <DrawerItem label={'Settings'}  labelStyle={styles.labelStyle} icon={()=>(
-        <MaterialIcons name={'settings'} size={20}/>
+        <MaterialIcons name={'settings'} size={25} color={'#BF5700'}/>
       )}/>   
     </View>
    </DrawerContentScrollView>

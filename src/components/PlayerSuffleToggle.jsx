@@ -14,7 +14,7 @@ const PlayerSuffleToggle = () => {
   return (
     <View>
       <TouchableOpacity onPress={suffleSongs}>
-        <Entypo name={'shuffle'} size={25}/>
+        <Entypo name={'shuffle'} size={25} color={'#BF5700'}/>
       </TouchableOpacity>
     </View>
   )

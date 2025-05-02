@@ -1,16 +1,24 @@
-import { recommendedSongs } from './songs';
+import { genres, ncsSongs, newRelease, party, Party, recommendedSongs } from './songs';
 
 export const songsCategory = [
   {
-    title: 'Recommended for you',
+    title: '- 🔥 Trending Now -',
     songs: recommendedSongs,
   },
   {
-    title: 'New Release',
-    songs: recommendedSongs,
+    title: '- 💝 Recommended for You -',
+    songs: newRelease,
   },
   {
-    title: 'NCS Songs',
-    songs: recommendedSongs,
+    title: '- 🎥 New Release -',
+    songs: ncsSongs,
+  },
+  {
+    title: '- 💃 Party / Dance -',
+    songs: party,
+  },
+  {
+    title: '- 🎧 Genres -',
+    songs: genres,
   },
 ];
