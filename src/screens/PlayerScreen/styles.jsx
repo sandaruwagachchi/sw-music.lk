@@ -38,15 +38,11 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center',
         flexDirection:'column',
-        marginTop:30
+        marginTop:10
     },
     heartContainer:{
-        flexDirection:'row',
-        alignItems:'center',
-        justifyContent:'space-between',
-        marginLeft:130,
-        marginRight:10,
-        marginTop:10
+       marginLeft:350,
+       marginTop:10
     },
     controller:{
         flexDirection:'row',

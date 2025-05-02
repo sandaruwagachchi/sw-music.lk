@@ -29,7 +29,7 @@ export const GoToPreviousButton = () => {
 
 export const PlayPauseButton = () => {
   const playbackState = usePlaybackState();
-  const progress = useProgress(); // This helps trigger re-renders when playback state changes
+  const progress = useProgress();
 
   const togglePlayback = async () => {
     try {
@@ -68,9 +68,16 @@ export const PlayPauseButton = () => {
 };
 
 export const GoToNextButton = () => {
+  const { setCurrentSong } = useContext(PlayerContext);
+
   const handleNext = async () => {
     try {
       await TrackPlayer.skipToNext();
+      const track = await TrackPlayer.getCurrentTrack();
+      if (track !== null) {
+        const trackObject = await TrackPlayer.getTrack(track);
+        setCurrentSong(trackObject); // 🔁 Update currentSong to refresh UI
+      }
     } catch (error) {
       console.error('Error going to next track:', error);
     }
@@ -82,6 +89,7 @@ export const GoToNextButton = () => {
     </TouchableOpacity>
   );
 };
+
 
 // Optional: Combined Player Controls Component
 export const PlayerControls = () => {

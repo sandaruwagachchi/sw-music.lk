@@ -5,7 +5,7 @@ import { GoToNextButton, GoToPreviousButton, PlayPauseButton } from './PlayerCon
 import Slider from '@react-native-community/slider';
 import { useNavigation } from '@react-navigation/native';
 import { PlayerContext } from '../context/PlayerContext';
-import TrackPlayer, { usePlaybackState, State } from 'react-native-track-player';
+import TrackPlayer, { usePlaybackState, State, useActiveTrack } from 'react-native-track-player';
 
 const FlotingPlayer = () => {
   const navigation = useNavigation();
@@ -14,6 +14,7 @@ const FlotingPlayer = () => {
   const [sliderValue, setSliderValue] = useState(0);
   const [position, setPosition] = useState(0);
   const [duration, setDuration] = useState(0);
+  const activeTrack = useActiveTrack();
 
   useEffect(() => {
     const setupPlayer = async () => {
@@ -80,10 +81,10 @@ const FlotingPlayer = () => {
         activeOpacity={0.85}
         onPress={handleOpenPlayerScreen}
       >
-        <Image source={{ uri: currentSong.artwork }} style={styles.image} />
+        <Image source={{ uri: activeTrack?.artwork }} style={styles.image} />
         <View style={styles.titleContainer}>
-          <Text style={styles.songTitle}>{currentSong.title}</Text>
-          <Text style={styles.songArtist}>{currentSong.artist}</Text>
+          <Text style={styles.songTitle}>{activeTrack?.title}</Text>
+          <Text style={styles.songArtist}>{activeTrack?.artist}</Text>
         </View>
         <View style={styles.playerControlContainer}>
           <GoToPreviousButton />

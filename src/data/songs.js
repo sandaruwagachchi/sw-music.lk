@@ -8,7 +8,7 @@ export const recommendedSongs = [
     {
       url: 'https://heyjmtbosstmwahsfhlj.supabase.co/storage/v1/object/public/ncs//1.mp3',
       title: 'Royalty',
-      artist: 'Egzod, Maestro Chives, Neoni',
+      artist: 'Egzod, Maestro Chives',
       artwork: 'https://linkstorage.linkfire.com/medialinks/images/374fc4ba-fe39-4bcf-9cf0-74c87c879ed0/artwork-440x440.jpg',
     },
     {
