@@ -8,7 +8,6 @@ import TrackPlayer, {
 } from 'react-native-track-player';
 import { PlayerContext } from '../context/PlayerContext';
 
-// 🔙 Previous Button
 export const GoToPreviousButton = () => {
   const { setCurrentSong } = useContext(PlayerContext);
 
@@ -32,11 +31,11 @@ export const GoToPreviousButton = () => {
   );
 };
 
-// ⏯ Play / Pause Button
+
 export const PlayPauseButton = () => {
   const [playbackState, setPlaybackState] = useState(State.None);
 
-  // 🔄 Listen to playback state changes
+ 
   useTrackPlayerEvents([Event.PlaybackState], async (event) => {
     if (event.state !== undefined) {
       setPlaybackState(event.state);
@@ -81,7 +80,7 @@ export const PlayPauseButton = () => {
   );
 };
 
-// ⏭ Next Button
+
 export const GoToNextButton = () => {
   const { setCurrentSong } = useContext(PlayerContext);
 
@@ -105,7 +104,7 @@ export const GoToNextButton = () => {
   );
 };
 
-// 🎵 All Controls Combined
+
 export const PlayerControls = () => {
   return (
     <View
